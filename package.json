@@ -1,0 +1,32 @@
+{
+  "name": "2020-fm-easybank-landing-page",
+  "version": "1.0.0",
+  "description": "My implementation of Frontend Mentor's \"Easybank Landing Page\" challenge.",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgdev1024/2020-fm-easybank-landing-page.git"
+  },
+  "keywords": [
+    "frontend",
+    "mentor",
+    "easybank",
+    "landing",
+    "page"
+  ],
+  "author": "Dennis Griffin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dgdev1024/2020-fm-easybank-landing-page/issues"
+  },
+  "homepage": "https://github.com/dgdev1024/2020-fm-easybank-landing-page#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
