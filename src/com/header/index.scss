@@ -1,0 +1,160 @@
+@import "../../global.scss";
+
+.header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: white;
+  z-index: 2;
+  background-image: linear-gradient(
+    to bottom,
+    $color-white,
+    $color-white 48px,
+    $color-dark-blue 48px,
+    transparent
+  );
+
+  @media #{$screen-medium} {
+    background-image: none;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 48px auto;
+    grid-template-areas:
+      "logo toggle"
+      "nav  nav   ";
+    align-items: center;
+
+    @media #{$screen-medium} {
+      grid-template-rows: auto;
+      grid-template-areas: "logo nav";
+    }
+
+    @media #{$screen-large} {
+      grid-template-columns: auto 1fr auto;
+      grid-template-areas: "logo nav invite";
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+    justify-self: start;
+    position: relative;
+    @include scale_logo_to_height(20px);
+
+    &-svg {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__menu-toggle {
+    grid-area: toggle;
+    justify-self: end;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    background-image: url("../../img/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+    border: none;
+
+    @media #{$screen-medium} {
+      display: none;
+    }
+  }
+
+  &--nav-shown .header__menu-toggle {
+    background-image: url("../../img/icon-close.svg");
+  }
+
+  &__nav {
+    grid-area: nav;
+    padding-top: 0px;
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    transition: $time-transition;
+
+    @media #{$screen-medium} {
+      justify-self: end;
+      height: auto;
+      opacity: 1;
+    }
+
+    @media #{$screen-large} {
+      justify-self: center;
+    }
+  }
+
+  &--nav-shown .header__nav {
+    height: 100vh;
+    padding-top: 24px;
+    opacity: 1;
+
+    @media #{$screen-medium} {
+      height: auto;
+      padding: 0px;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: $color-white;
+    color: $color-dark-blue;
+    text-align: center;
+
+    &:hover {
+      color: $color-grayish-blue;
+    }
+
+    &:first-child {
+      border-radius: 8px 8px 0px 0px;
+    }
+
+    &:last-child {
+      border-radius: 0px 0px 8px 8px;
+    }
+
+    @media #{$screen-medium} {
+      display: inline-block;
+      width: auto;
+      padding: 24px 8px;
+      color: $color-grayish-blue;
+
+      &:hover {
+        color: $color-dark-blue;
+        border-bottom: 3px solid $color-bright-cyan;
+        padding-bottom: 21px;
+      }
+
+      &:first-child,
+      &:last-child {
+        border-radius: 0px;
+      }
+    }
+
+    @media #{$screen-large} {
+      padding: 24px 12px;
+    }
+  }
+
+  &__request-invite {
+    display: none;
+    grid-area: invite;
+    justify-self: end;
+
+    @media #{$screen-large} {
+      display: block;
+    }
+  }
+}
