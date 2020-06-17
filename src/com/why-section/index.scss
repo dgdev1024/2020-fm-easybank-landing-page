@@ -1,0 +1,44 @@
+@import "../../global.scss";
+
+.why {
+  padding: 64px 0px;
+  background-color: $color-light-grayish-blue;
+
+  &__container {
+    max-width: 400px;
+
+    @media #{$screen-medium} {
+      max-width: none;
+    }
+  }
+
+  &__heading,
+  &__text {
+    max-width: 75%;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+
+    @media #{$screen-medium} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media #{$screen-large} {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__card-heading {
+    margin: 24px 0px 0px;
+  }
+}

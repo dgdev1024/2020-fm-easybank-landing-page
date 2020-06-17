@@ -5,7 +5,6 @@
   top: 0px;
   left: 0px;
   width: 100%;
-  background-color: white;
   z-index: 2;
   background-image: linear-gradient(
     to bottom,
@@ -17,6 +16,7 @@
 
   @media #{$screen-medium} {
     background-image: none;
+    background-color: white;
   }
 
   &__container {
