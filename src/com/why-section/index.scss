@@ -14,13 +14,16 @@
 
   &__heading,
   &__text {
-    max-width: 75%;
+    @media #{$screen-medium} {
+      max-width: 60%;
+    }
   }
 
   &__cards {
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
+    margin-top: 64px;
 
     @media #{$screen-medium} {
       grid-template-columns: repeat(2, 1fr);

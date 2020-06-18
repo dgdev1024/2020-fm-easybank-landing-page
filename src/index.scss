@@ -35,10 +35,6 @@ body {
   @media #{$screen-large} {
     width: 80%;
   }
-
-  @media #{$screen-extra-large} {
-    width: 75%;
-  }
 }
 
 // Headings
@@ -47,6 +43,10 @@ body {
   color: $color-dark-blue;
   line-height: 1.2em;
   text-align: center;
+
+  @media #{$screen-medium} {
+    text-align: left;
+  }
 
   &--bold {
     font-weight: $font-weight-bold;
@@ -67,12 +67,6 @@ body {
   &--align-left {
     text-align: left;
   }
-
-  &--align-left-on-desktop {
-    @media #{$screen-medium} {
-      text-align: left;
-    }
-  }
 }
 
 // Text
@@ -82,18 +76,36 @@ body {
   line-height: 1.5em;
   text-align: center;
 
+  @media #{$screen-medium} {
+    text-align: left;
+
+    &--align-center {
+      text-align: center;
+    }
+
+    &--align-right {
+      text-align: right;
+    }
+  }
+
   &--small {
     font-size: 0.9em;
+  }
+
+  &--smaller {
+    font-size: 0.8em;
   }
 
   &--align-left {
     text-align: left;
   }
 
-  &--align-left-on-desktop {
-    @media #{$screen-medium} {
-      text-align: left;
-    }
+  &--align-center {
+    text-align: center;
+  }
+
+  &--align-right {
+    text-align: right;
   }
 }
 
@@ -101,6 +113,10 @@ body {
 .link {
   font-size: 0.9em;
   text-decoration: none;
+
+  &--footer {
+    color: $color-lighter-grayish-blue;
+  }
 }
 
 // Buttons
@@ -123,5 +139,20 @@ body {
     font-weight: $font-weight-bold;
     border: none;
     border-radius: 32px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+// Logo SVG
+.logo-svg {
+  &--footer .logo-svg__text {
+    fill: $color-lighter-grayish-blue;
   }
 }

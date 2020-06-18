@@ -1,0 +1,24 @@
+@import "../../global.scss";
+
+.articles {
+  padding: 32px 0px;
+  background-color: $color-lighter-grayish-blue;
+
+  &__article-cards {
+    width: 100%;
+    max-width: 400px;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    @media #{$screen-medium} {
+      max-width: none;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media #{$screen-large} {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

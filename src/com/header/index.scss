@@ -9,8 +9,8 @@
   background-image: linear-gradient(
     to bottom,
     $color-white,
-    $color-white 48px,
-    $color-dark-blue 48px,
+    $color-white 64px,
+    $color-dark-blue 64px,
     transparent
   );
 
@@ -22,7 +22,7 @@
   &__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 48px auto;
+    grid-template-rows: 64px auto;
     grid-template-areas:
       "logo toggle"
       "nav  nav   ";
