@@ -19,6 +19,7 @@ const Footer = () => (
           <Logo
             className="footer__logo-svg logo-svg--footer"
             viewBox="0 0 139 20"
+            footer={true}
           />
         </div>
         <div className="footer__social-links">
