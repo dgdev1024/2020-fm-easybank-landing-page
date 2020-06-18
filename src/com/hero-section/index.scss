@@ -15,6 +15,7 @@
 
   @media #{$screen-medium} {
     min-height: 600px;
+    max-height: 800px;
     margin-bottom: 0px;
     overflow: visible;
     background-image: url("../../img/bg-intro-desktop.svg");
