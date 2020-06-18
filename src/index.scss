@@ -46,6 +46,14 @@ body {
 
   @media #{$screen-medium} {
     text-align: left;
+
+    &--align-center {
+      text-align: center;
+    }
+
+    &--align-right {
+      text-align: right;
+    }
   }
 
   &--bold {
@@ -66,6 +74,14 @@ body {
 
   &--align-left {
     text-align: left;
+  }
+
+  &--align-center {
+    text-align: center;
+  }
+
+  &--align-right {
+    text-align: right;
   }
 }
 

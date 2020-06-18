@@ -26,7 +26,7 @@ const WhySection = () => (
             alt="Online Banking"
             className="why__card-image"
           />
-          <h3 className="why__card-heading heading heading--small heading--align-left-on-desktop">
+          <h3 className="why__card-heading heading heading--small heading--align-left">
             Online Banking
           </h3>
           <p className="why__card-text text text--small text--align-left-on-desktop">
@@ -40,7 +40,7 @@ const WhySection = () => (
             alt="Simple Budgeting"
             className="why__card-image"
           />
-          <h3 className="why__card-heading heading heading--small heading--align-left-on-desktop">
+          <h3 className="why__card-heading heading heading--small heading--align-left">
             Simple Budgeting
           </h3>
           <p className="why__card-text text text--small text--align-left-on-desktop">
@@ -54,7 +54,7 @@ const WhySection = () => (
             alt="Fast Onboarding"
             className="why__card-image"
           />
-          <h3 className="why__card-heading heading heading--small heading--align-left-on-desktop">
+          <h3 className="why__card-heading heading heading--small heading--align-left">
             Fast Onboarding
           </h3>
           <p className="why__card-text text text--small text--align-left-on-desktop">
@@ -64,7 +64,7 @@ const WhySection = () => (
         </div>
         <div className="why__card">
           <img src={IconApi} alt="Open API" className="why__card-image" />
-          <h3 className="why__card-heading heading heading--small heading--align-left-on-desktop">
+          <h3 className="why__card-heading heading heading--small heading--align-left">
             Open API
           </h3>
           <p className="why__card-text text text--small text--align-left-on-desktop">
