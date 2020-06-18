@@ -47,7 +47,9 @@
     @media #{$screen-medium} {
       grid-column: 2 / 3;
       top: -48px;
+      right: 0px;
       width: 135%;
+      max-width: 900px;
     }
   }
 
